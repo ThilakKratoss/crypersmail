@@ -26,32 +26,33 @@ app.get("/", (req, res) => {
 app.post("/upload", (req, res) => {
     console.log(req.files.name);
     // console.log(req.fields);
-var newname=req.files.avatar.path + '.pdf'
-    fs.rename(req.files.avatar.path,newname, (err, data) => {
-        console.log(data);
-        // console.log(err);
-    });
+// var newname=req.files.avatar.path + '.pdf'
+//     fs.rename(req.files.avatar.path,newname, (err, data) => {
+//         console.log(data);
+//          console.log(err);
+//     });
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'vinod.looser00@gmail.com',
-          pass: 'vinoth1080'
+          user: 'thilakal9299@gmail.com',
+          pass: "9944681892"
         }
       });
       //machine leanring is an art
       var string=""
       for(var key in req.fields){
+        
           string+= key+":"+req.fields[key]+"\n"
       }
       console.log(string)
       var mailOptions = {
-        from: 'vinod.aadvik@gmail.com',
-        to:"careers@inspremacengineers.com",
+        from: 'thilakal9299@gmail.com',
+        to:"thilakal9299@gmail.com",
         //to: 'linguisticsresearch@phoenicorn.com',
-        subject: 'uploaded resume',
-        text: string,
+        subject: 'Crypers Mail Service',
+        text: string
       
-        attachments:[{filename:newname}]
+        //attachments:[{filename:newname}]
       };
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
@@ -65,5 +66,5 @@ var newname=req.files.avatar.path + '.pdf'
       }); 
 });
 app.listen(port, (req, res) => {
-    console.log("app is running on 1000")
+    console.log("app is running on 3000")
 })
