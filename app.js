@@ -44,6 +44,7 @@ app.post("/upload", (req, res) => {
         
           string+= key+":"+req.fields[key]+"\n"
       }
+      
       console.log(string)
       var mailOptions = {
         from: 'thilakal9299@gmail.com',
@@ -54,16 +55,22 @@ app.post("/upload", (req, res) => {
       
         //attachments:[{filename:newname}]
       };
+      
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
-            res.send("somthing went wrong")
+           // res.send("somthing went wrong")
+           res.render('error',{layout:false});
         } else {
           console.log('Email sent: ' + info.response);
-          res.send("Thank you for your response ")
-          
+           res.render('thankyou', { layout: false });
+         // res.send("Thank you for your response ")
+          // return res.render("file:///C:/Users/ACAL/Desktop/Natours/contact.html");
+
+
         }
-      }); 
+      });
+    
 });
 app.listen(port, (req, res) => {
     console.log("app is running on 3000")
