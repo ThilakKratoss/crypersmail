@@ -1,0 +1,93 @@
+.section-about{
+    background-color: $black;
+    //margin-top: -20vh;
+    padding-top: 10rem;
+    @include respond(tab-port){
+        ppadding-top: 5rem;
+    }
+}
+
+.section-stories {
+    position: relative;
+    padding: 15rem 0;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.res{
+    @include respond(phone){
+        margin-left: 5rem;
+        width: 100%;
+
+    }
+}
+
+.section-features {
+    padding: 20rem 0;
+    background-color: #f7f7f7;
+    //background-image: linear-gradient(to right bottom,rgba($color-cyan-light,.8),rgba($color-cyan-dark,.8)),url(../../img/popbg.jpg);
+    //background-size: cover;
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
+}
+
+//section contact us 
+.contact{
+    padding:15rem 0;
+//     background-image: linear-gradient(to right bottom,$blue-right:rgb(4,240,200),$blue-button:rgb(2, 133, 255));
+// }
+     background-image: linear-gradient(to bottom right, $color-cyan-light , $color-cyan-dark);
+    // background-color: aqua;
+}
+.book{
+    background-image: linear-gradient(105deg,
+    rgba($color-white, .9) 0%,
+    rgba($color-white, .9) 50%,
+    transparent 50%) ,
+    url(../img/popbg.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, 0.2);
+
+
+    @include respond(tab-land) {
+        background-image: linear-gradient(105deg, 
+        rgba($color-white, .9) 0%,
+        rgba($color-white, .9) 65%,
+        transparent 65%) ,
+        url(../img/popbg.jpg);
+        background-size: cover;
+    }
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right, 
+        rgba($color-white, .9) 0%,
+        rgba($color-white, .9) 100%),
+        url(../img/popbg.jpg);
+    }
+
+    &__img{
+        height: 50vh;
+        position: relative;
+    }
+    
+    &__form{
+        width:50%;
+        padding: 6rem;
+
+        @include respond(tab-land) {
+            width: 65%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+}
+$blue-right:rgb(4,240,200);
+$blue-button:rgb(2, 133, 255);

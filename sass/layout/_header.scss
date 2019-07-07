@@ -1,0 +1,34 @@
+.header{
+    height: 100vh;
+    // background-image: linear-gradient(to right bottom,rgba($black,0.8)
+    // ,rgba($blue-right,0.8)) ,url("../img/hero.jpg");
+    // clip-path: polygon(0 0,100% 0%,100% 75vh,0 100%);
+    // -webkit-clip-path: polygon(0 0,100% 0%,100% 75vh,0 100%);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    // @include respond(phone){
+    //     clip-path: polygon(0 0,100% 0%,100% 85vh,0 100%);
+    //     -webkit-clip-path: polygon(0 0,100% 0%,100% 85vh,0 100%);
+    // }
+    &__logo-header{
+        position: absolute;
+        top:4rem;
+        left: 4rem;
+    }
+    &__logo{
+        height: 7.5rem;
+        @include respond(phone){
+            height: 6rem;
+        }
+    }
+    &__text-box{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        text-align: center;
+    }
+
+}

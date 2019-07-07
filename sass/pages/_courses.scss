@@ -1,0 +1,47 @@
+.book-pop{
+    background-image: linear-gradient(105deg,
+    rgba($color-cyan-light, .8) 0%,
+    rgba($color-cyan-dark, .8) 50%,
+    rgba($color-primary-dark,.8) 50%,
+    rgba($color-primary-light,.8) 100%);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, 0.2);
+    //height: 47rem;
+
+    transition: all .1s;
+    &__form-pop{
+        width:100%;
+        padding: 5rem;
+        @include respond(phone){
+            padding: 4rem;            
+        }
+    }
+
+}
+
+.heading-mod-1{
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3rem;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-30%,-30%);
+}
+.heading-mod-2{
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.heading-mod-3{
+    color: white;
+    font-weight: 700;
+    padding: 2rem;
+}
